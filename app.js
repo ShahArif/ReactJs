@@ -1,4 +1,5 @@
+var h1 =  React.createElement('h1',null ,'Hello World from App file');
+var myApp = document.getElementById('myApp');
 ReactDOM.render(
-    React.createElement('h1',null ,'Hello World from App file')
-    , document.getElementById('myApp')
+    h1,myApp 
  );
