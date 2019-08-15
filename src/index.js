@@ -8,7 +8,7 @@ import Helloworld from './App';
 
 
 ReactDOM.render(
-    <div class="Custom-Component">
+    <div className="Custom-Component">
         <Helloworld link="https://google.com" linktext="Google.com" />
         
         <Helloworld link="https://fb.com" linktext="facebook.com" />
