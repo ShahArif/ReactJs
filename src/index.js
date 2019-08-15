@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 // import './index.css';
 import Helloworld from './App';
 // import * as serviceWorker from './serviceWorker';
-
+import Methods from './Methods';
 
 
 
@@ -14,6 +14,8 @@ ReactDOM.render(
         <Helloworld link="https://fb.com" linktext="facebook.com" />
     
         <Helloworld link="https://linkined.com" linktext="Linkined.com" />
+        <br/>
+        <Methods/>
     </div>
     ,document.getElementById('root'));
 
