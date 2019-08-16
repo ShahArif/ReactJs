@@ -5,20 +5,13 @@ import Helloworld from './HelloWord';
 // import * as serviceWorker from './serviceWorker';
 import Methods from './Methods';
 import Clock from './Clock';
+import CustomeRoutes from './Routes';
 
 
 
 ReactDOM.render(
     <div className="Custom-Component">
-        <Helloworld link="https://google.com" linktext="Google.com" />
-        
-        <Helloworld link="https://fb.com" linktext="facebook.com" />
-    
-        <Helloworld link="https://linkined.com" linktext="Linkined.com" />
-        <br/>
-        <Methods/>
-        <br/>
-        <Clock/>
+      <CustomeRoutes/>
     </div>
     ,document.getElementById('root'));
 
