@@ -1,27 +1,31 @@
 import React, {Component} from 'react';
 import DigitalClock from './DigitalClock';
+import AnalogClock from './AnalogClock';
 
 
 class Clock extends Component{
     constructor(props){
         super(props);
         this.state= {
-            currentTime: new Date().toLocaleString()
+            currentTime: new Date().toString()
         };
         this.updateTime();
     }
     updateTime(){
         setInterval(()=>{
             this.setState({
-                currentTime: new Date().toLocaleString()
+                currentTime: new Date().toString()
             })
         },1000);
     }
 
     render(){
         return(
-            // <h1>{this.state.currentTime}</h1> 
-            <DigitalClock time={this.state.currentTime}/>
+           <div>
+                <DigitalClock time={this.state.currentTime}/>
+                <br/>
+                <AnalogClock time={this.state.currentTime}/>
+           </div>
         )
     }
 }
