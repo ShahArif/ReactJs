@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import DigitalClock from './DigitalClock';
+
 
 class Clock extends Component{
     constructor(props){
@@ -18,7 +20,8 @@ class Clock extends Component{
 
     render(){
         return(
-            <h1>{this.state.currentTime}</h1>
+            // <h1>{this.state.currentTime}</h1> 
+            <DigitalClock time={this.state.currentTime}/>
         )
     }
 }
