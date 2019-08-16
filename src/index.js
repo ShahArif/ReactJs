@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css';
-import Helloworld from './App';
+import Helloworld from './HelloWord';
 // import * as serviceWorker from './serviceWorker';
 import Methods from './Methods';
+import Clock from './Clock';
 
 
 
@@ -16,6 +17,8 @@ ReactDOM.render(
         <Helloworld link="https://linkined.com" linktext="Linkined.com" />
         <br/>
         <Methods/>
+        <br/>
+        <Clock/>
     </div>
     ,document.getElementById('root'));
 
