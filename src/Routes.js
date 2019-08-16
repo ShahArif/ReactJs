@@ -9,8 +9,12 @@ import {
     Link,
 } from 'react-router-dom';
 
+import {createBrowserHistory} from 'history/createBrowserHistory';
+const customHistory = createBrowserHistory;
+
+
 const CustomeRoutes = () =>(
-    <Router>
+    <Router history={customHistory}>
         <div>
             <Navbar/>
             <hr/>
