@@ -6,21 +6,25 @@ import Navbar from './Links';
 import {
     BrowserRouter as Router,
     Route,
-    Link,
 } from 'react-router-dom';
+import Clock from './Clock';
+import EventsFile from './Events';
 
-import {createBrowserHistory} from 'history/createBrowserHistory';
-const customHistory = createBrowserHistory;
+// import { createBrowserHistory } from "history";
+// const history = createBrowserHistory();
 
 
 const CustomeRoutes = () =>(
-    <Router history={customHistory}>
+    <Router>
         <div>
             <Navbar/>
             <hr/>
             <Route exact path='/' component={methods}/>
             <Route path='/about' component={about}/>
             <Route path='/contact' component={contact}/>
+            <Route path='/clock' component={Clock}/>
+            <Route path='/events' component={EventsFile}/>
+        
         </div>
     </Router>
 )

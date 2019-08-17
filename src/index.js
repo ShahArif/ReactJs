@@ -1,10 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css';
-import Helloworld from './HelloWord';
-// import * as serviceWorker from './serviceWorker';
-import Methods from './Methods';
-import Clock from './Clock';
 import CustomeRoutes from './Routes';
 
 

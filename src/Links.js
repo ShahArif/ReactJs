@@ -9,7 +9,7 @@ class Navbar extends Component{
             <ul>
                 <li>
                     <Link to="/">Home</Link>
-                    <Link to="/about">About</Link>
+                    <Link to="/about/2100">About</Link>
                     <Link to="/contact">Contact</Link>
                 </li>
             </ul>

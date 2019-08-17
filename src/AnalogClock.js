@@ -1,11 +1,7 @@
 import React from 'react';
 
 function AnalogClock(props){
-    // console.log(props.time + 'Analog CLock')
     let time = new Date(props.time);
-
-    console.log( time.getHours())
-
     let container ={
         position:'relative',
         top:0,
