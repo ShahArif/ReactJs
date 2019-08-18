@@ -11,6 +11,7 @@ class Navbar extends Component{
                     <Link to="/">Home</Link>
                     <Link to="/about/2100">About</Link>
                     <Link to="/contact">Contact</Link>
+                    <Link to="/form">Form</Link>
                 </li>
             </ul>
         )

@@ -3,6 +3,7 @@ import about from './About';
 import contact from './Contact';
 import methods from './Methods';
 import Navbar from './Links';
+import form from './Form';
 import {
     BrowserRouter as Router,
     Route,
@@ -21,6 +22,7 @@ const CustomeRoutes = () =>(
             <hr/>
             <Route exact path='/' component={methods}/>
             <Route path='/about' component={about}/>
+            <Route path='/form' component={form}/>
             <Route path='/contact' component={contact}/>
             <Route path='/clock' component={Clock}/>
             <Route path='/events' component={EventsFile}/>
