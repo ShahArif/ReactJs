@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import Counter from './Counter';
+import { connect } from 'react-redux';
+
 
 class About extends Component{
     constructor(props){
@@ -44,7 +46,7 @@ class About extends Component{
                     <button onClick={this.decrementHandle}>-</button>
                 </div> */}
                 <div>
-                   
+                     <h1> Hey {this.props.userName}</h1>
                     <Counter counter={this.state.counter} inc={this.counterHandle.bind(this, 'increment')} dec={this.counterHandle.bind(this, 'decrement')}/>
                 </div>
             </div>
@@ -52,4 +54,16 @@ class About extends Component{
     }
 }
 
-export default About;
+function mapStateToProp(state){
+    return({
+        userName: state.root.userName,
+        currentUser:state.root.currentUser
+    })
+}
+function mapDispatchToProp(dispatch){
+    return({
+        // changeUserName: ()=>{dispatch(changeUserName())}
+    })
+}
+
+export default connect(mapStateToProp,mapDispatchToProp)(About);

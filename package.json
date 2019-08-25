@@ -12,7 +12,8 @@
     "react-thunk": "^1.0.0",
     "redux": "^4.0.4",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "firebase": "^4.8.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -34,5 +35,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShahArif/ReactJs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShahArif/ReactJs/issues"
+  },
+  "homepage": "https://github.com/ShahArif/ReactJs#readme"
 }
