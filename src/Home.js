@@ -2,11 +2,26 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import {changeUserName} from './store/actions/action';
+import {changeUserName,login} from './store/actions/action';
 class Home extends Component {
+    constructor(props){
+        super(props);
+        this.state={
+            userName:''
+        }
+    }
     _changeData(){
         console.log('event called');
         this.props.changeUserName();
+    }
+    loginHandle(){
+        this.props.login(this.state.userName);
+    }
+    updateUser(event){
+        console.log('Update State',event.target.value);
+        this.setState({
+            userName:event.target.value
+        })
     }
 
     render() {
@@ -18,7 +33,11 @@ class Home extends Component {
                     <Link to='/about'>Go to About</Link>
                 </div>
                 <div>
-                    <h1> Hey {this.props.currentUser}</h1>
+                    <input type='text' value={this.state.userName} onChange={this.updateUser.bind(this)}/>
+                    <button onClick={this.loginHandle.bind(this)}>Login</button>
+                    <div>
+                             <h1> Welcome {this.props.currentUser}</h1>
+                    </div>
                 </div>
             </div>
         )
@@ -33,7 +52,8 @@ function mapStateToProp(state){
 }
 function mapDispatchToProp(dispatch){
     return({
-        changeUserName: ()=>{dispatch(changeUserName())}
+        changeUserName: ()=>{dispatch(changeUserName())},
+        login:(updatedUsername) => {dispatch(login(updatedUsername))}
     })
 }
 

@@ -16,11 +16,11 @@ export function changeUserName() {
     }
 }
 
-export function login(){
+export function login(data){
     return dispatch => {
        dispatch({
             type: ActionTypes.LOGIN,
-            payload:{'username':'arishah'}
+            payload: data
        })
     }
 }

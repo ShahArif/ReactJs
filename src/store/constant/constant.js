@@ -3,7 +3,8 @@ const ActionTypes = {
     CURRENTUSER:'CURRENTUSER',
     ALLUSERS:'ALLUSERS',
     MESSAGES: 'MESSAGES',
-    CHANGERECPUID: 'CHANGERECPUID'
+    CHANGERECPUID: 'CHANGERECPUID',
+    LOGIN: 'LOGIN',
 }
 
 export default ActionTypes;
