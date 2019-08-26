@@ -15,13 +15,19 @@ class Home extends Component {
         this.props.changeUserName();
     }
     loginHandle(){
-        this.props.login(this.state.userName);
+        if(this.state.userName){
+            this.props.login(this.state.userName);
+        } else{
+            alert('Please fill the box')
+        }
     }
     updateUser(event){
         console.log('Update State',event.target.value);
-        this.setState({
-            userName:event.target.value
-        })
+      
+            this.setState({
+                userName:event.target.value
+            })
+       
     }
 
     render() {
@@ -33,7 +39,7 @@ class Home extends Component {
                     <Link to='/about'>Go to About</Link>
                 </div>
                 <div>
-                    <input type='text' value={this.state.userName} onChange={this.updateUser.bind(this)}/>
+                    <input type='text' required="required" value={this.state.userName} onChange={this.updateUser.bind(this)}/>
                     <button onClick={this.loginHandle.bind(this)}>Login</button>
                     <div>
                              <h1> Welcome {this.props.currentUser}</h1>
