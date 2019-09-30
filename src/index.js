@@ -3,15 +3,16 @@ import ReactDOM from 'react-dom';
 // import './index.css';
 import CustomeRoutes from './Routes';
 import { Provider } from 'react-redux';
-import store from './store'
-
+import { createStore } from 'redux'
+import rootReducer from './store/Reducers/rootReducers'
+const store = createStore(rootReducer);
 
 ReactDOM.render(
+    <Provider store={store}>
     <div className="Custom-Component">
-      <Provider store={store}>
         <CustomeRoutes/>
-      </Provider>
     </div>
+    </Provider>
     ,document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

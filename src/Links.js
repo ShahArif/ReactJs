@@ -9,9 +9,11 @@ class Navbar extends Component{
             <ul>
                 <li>
                     <Link to="/">Home</Link>
-                    <Link to="/about/2100">About</Link>
+                    <Link to="/blog">Blog</Link>
                     <Link to="/contact">Contact</Link>
                     <Link to="/form">Form</Link>
+                    <br/>    
+                    <Link to="/medium">MEDIUM</Link>
                 </li>
             </ul>
         )
